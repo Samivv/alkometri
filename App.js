@@ -1,4 +1,3 @@
-// import { StatusBar } from 'expo-status-bar';
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { darkModeStyles, lightModeStyles, tyylit } from './styles'
 import ToggleSwitch from 'toggle-switch-react-native'
@@ -20,12 +19,16 @@ export default function App() {
   const [sukupuoli,setSukupuoli] = useState(false);
 
   function laskeAP() {
-    let litrat = pullot * 0.33
-    let grammat = litrat * 8 * 4.5
-    let polttoAika = paino / 10
-    let grammatJaljella = grammat - polttoAika * tunnit
-    let tulos = sukupuoli ? grammatJaljella/(paino*0.6) : grammatJaljella/(paino*0.7) // mies / nainen
-    setPromillet(tulos>0 ? tulos.toFixed(2) : 0)
+    if(paino == "" || paino==0) {
+      alert("Syötä paino!")
+    } else {
+      let litrat = pullot * 0.33
+      let grammat = litrat * 8 * 4.5
+      let polttoAika = paino / 10
+      let grammatJaljella = grammat - polttoAika * tunnit
+      let tulos = sukupuoli ? grammatJaljella/(paino*0.6) : grammatJaljella/(paino*0.7) // mies / nainen
+      setPromillet(tulos>0 ? tulos.toFixed(2) : 0)
+    }
   }
 
 
@@ -78,7 +81,7 @@ export default function App() {
       <Text style={{color: tilanne ? 'white' : 'black'}}>Tulos: </Text>
       <Text style={{color:promillet < 0.5 ? tyylit.nappienVari : "red", fontWeight: 'bold',fontSize:45}}>{promillet}{promillet < 0.5 ? <TuloksenTulostus i="car-hatchback" koko={50}/> : <TuloksenTulostus i="bike-fast" koko={40}/>}</Text>
       </View>
-      <TouchableOpacity onPress={laskeAP}>
+      <TouchableOpacity onPress={laskeAP }>
       <Text style={tilanne ? tyylit.nappi : darkModeStyles.nappi}>Laske</Text>
       </TouchableOpacity>
     </View>
