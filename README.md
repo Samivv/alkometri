@@ -1,6 +1,6 @@
 Perus alkometri react-nativella.
 
-Nyt heittää warningia, mutta toimii.
+Nyt heittää warningia käynnistykseen, mutta toimii. (Syystä että switch toggleen laitettu labeliksi iconi elementti)
 
 ![Screenshot_2023-09-14-20-30-26-86_f73b71075b1de7323614b647fe394240](https://github.com/Samivv/alkometri/assets/101732172/3c6a449e-56ab-474f-9293-06a270b18b4b)
 
