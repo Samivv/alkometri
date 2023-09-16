@@ -65,7 +65,7 @@ export default function App() {
 
       <View style={tyylit.sukupuoli}>
       <TekstiIconilla t="Paino " ic="weight-kilogram" koko={37}/>
-      <TextInput style={tyylit.paino} onChangeText={setPaino} minValue={} keyboardType='numeric'></TextInput>
+      <TextInput style={tyylit.paino} onChangeText={setPaino} keyboardType='numeric'></TextInput>
       </View>
 
       <View style={tyylit.sukupuoli}>
@@ -84,7 +84,7 @@ export default function App() {
       <TouchableOpacity onPress={laskeAP }>
       <Text style={tilanne ? tyylit.nappi : darkModeStyles.nappi}>Laske</Text>
       </TouchableOpacity>
-    </View>
+    </View> 
     
 );
 }

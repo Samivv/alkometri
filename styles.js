@@ -23,7 +23,7 @@ export const tyylit = StyleSheet.create({
     alignSelf:'flex-end',
     marginTop:'10%',
     marginRight:'2%',
-    alignItems:'center'
+    alignItems:'center',
   },
   nappi: {
     width: 100,
