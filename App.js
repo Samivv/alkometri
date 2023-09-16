@@ -65,17 +65,17 @@ export default function App() {
 
       <View style={tyylit.sukupuoli}>
       <TekstiIconilla t="Paino " ic="weight-kilogram" koko={37}/>
-      <TextInput style={tyylit.paino} onChangeText={setPaino} keyboardType='numeric'></TextInput>
+      <TextInput style={tyylit.paino} onChangeText={setPaino} minValue={} keyboardType='numeric'></TextInput>
       </View>
 
       <View style={tyylit.sukupuoli}>
       <TekstiIconilla t="Pullot" ic="bottle-soda" koko={45}/>
-      <NumericInput borderColor={hoidaNapit} iconStyle={{color: 'white'}} textColor={tyylit.nappienVari} rounded rightButtonBackgroundColor={hoidaNapit} leftButtonBackgroundColor={hoidaNapit} value={pullot} minValue={0} maxValue={50}onChange={setPullot}/>
+      <NumericInput borderColor={hoidaNapit} iconStyle={{color: 'white'}} textColor={tyylit.nappienVari} rounded rightButtonBackgroundColor={hoidaNapit} leftButtonBackgroundColor={hoidaNapit} value={pullot} minValue={0} onChange={setPullot}/>
       </View>
 
       <View style={tyylit.sukupuoli}>
       <TekstiIconilla t="Tunnit" ic="timer" koko={42}/>
-      <NumericInput borderColor={hoidaNapit} iconStyle={{color: 'white'}} textColor={tyylit.nappienVari} rounded rightButtonBackgroundColor={hoidaNapit} leftButtonBackgroundColor={hoidaNapit} value={tunnit} minValue={0} maxValue={50}onChange={setTunnit}/>
+      <NumericInput borderColor={hoidaNapit} iconStyle={{color: 'white'}} textColor={tyylit.nappienVari} rounded rightButtonBackgroundColor={hoidaNapit} leftButtonBackgroundColor={hoidaNapit} value={tunnit} minValue={0} onChange={setTunnit}/>
       </View>
       <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
       <Text style={{color: tilanne ? 'white' : 'black'}}>Tulos: </Text>
